@@ -4,7 +4,6 @@ import AddEditEvent from "./pages/AddEditEvent";
 import ViewEvent from "./pages/ViewEvent";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-
 import './App.css';
 
 function App() {
@@ -21,5 +20,6 @@ function App() {
     </BrowserRouter>
   );
 }
+
 
 export default App;

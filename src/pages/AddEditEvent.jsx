@@ -20,7 +20,7 @@ const AddEditEvent = () => {
   useEffect(() => {
     if (id) {
       setLoading(true);
-      axios.get(`https://6801758b81c7e9fbcc42960b.mockapi.io/events/${id}`)
+      axios.get(`https://6801758b81c7e9fbcc42960b.mockapi.io/events/events/${id}`)
         .then((res) => {
           setFormData(res.data);
           setError(null);
@@ -48,7 +48,7 @@ const AddEditEvent = () => {
     setLoading(true);
 
     const apiCall = id
-      ? axios.put(`https://6801758b81c7e9fbcc42960b.mockapi.io/events/${id}`, formData)
+      ? axios.put(`https://6801758b81c7e9fbcc42960b.mockapi.io/events${id}`, formData)
       : axios.post(`https://6801758b81c7e9fbcc42960b.mockapi.io/events`, formData);
 
     apiCall
@@ -83,7 +83,7 @@ const AddEditEvent = () => {
           className="w-full p-2 border rounded"
           required
         />
-
+        
         <textarea
           name="description"
           value={formData.description}
